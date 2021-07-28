@@ -1,0 +1,10 @@
+#include<iostream>
+#include"header.h"
+
+void add(int a, int b)
+{
+	int c;
+	c = a+b;
+	std::cout << "Addtion is: " << c << std::endl;
+}
+

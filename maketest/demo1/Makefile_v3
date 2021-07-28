@@ -1,0 +1,17 @@
+src = $(wildcard *.c)
+obj = $(patsubst %.c, %.o, $(src)) #所有的.c文件替换成.o文件
+
+ALL:a.out
+
+a.out:$(obj) header.h
+	gcc $^ -o $@
+
+hello.o:hello.c
+	gcc -c $< -o $@
+add.o:add.c
+	gcc -c $< -o $@
+main.o:main.c
+	gcc -c $< -o $@
+
+clean:
+	-rm -rf $(obj) a.out

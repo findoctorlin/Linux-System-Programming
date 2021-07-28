@@ -1,0 +1,12 @@
+# write them seperately, aviod unnessary compile(unchanged code files)
+# main.c changed its updated time!! So main.o need to update 依赖中任何一个被更新，则目标被更新
+ALL:a.out	#指定最终生成目标
+
+hello.o:hello.c
+	gcc -c hello.c -o hello.o
+add.o:add.c
+	gcc -c add.c -o add.o
+main.o:main.c
+	gcc -c main.c -o main.o
+a.out:hello.o add.o main.o header.h
+	gcc hello.o add.o main.o header.h -o a.out

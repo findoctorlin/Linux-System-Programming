@@ -1,0 +1,12 @@
+#include<iostream>
+#include"header.h"
+
+int main()
+{
+	std::cout << "I am in main.c" << std::endl;
+	std::cout << "Calling hello function" << std::endl;
+	hello();
+	std::cout << "Calling add function" << std::endl;
+	add(3,5);
+	std::cout << "Back to main.c" << std::endl;
+}
